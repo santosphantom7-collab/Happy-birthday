@@ -1,144 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday Kiki 🎂💖</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Happy Birthday Kiki 🎂💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        body{
-            background: linear-gradient(135deg,#ff4d6d,#ff8fa3,#ffc2d1);
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            overflow:hidden;
-        }
+    body {
+      background: linear-gradient(135deg, #ff4d6d, #ff8fa3, #ffc2d1);
+      min-height: 100vh;
+      overflow-y: auto;
+    }
 
-        .card{
-            background:rgba(255,255,255,0.15);
-            backdrop-filter: blur(12px);
-            border-radius:25px;
-            padding:40px 30px;
-            max-width:420px;
-            width:90%;
-            text-align:center;
-            color:white;
-            box-shadow:0 20px 40px rgba(0,0,0,0.25);
-            animation: fadeIn 2s ease;
-        }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
 
-        @keyframes fadeIn{
-            from{opacity:0; transform:scale(0.9)}
-            to{opacity:1; transform:scale(1)}
-        }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      padding: 30px 20px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      animation: fadeIn 1.5s ease;
+    }
 
-        h1{
-            font-size:2.4em;
-            margin-bottom:10px;
-            text-shadow:0 0 10px rgba(255,255,255,0.6);
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
-        h2{
-            font-weight:400;
-            margin-bottom:20px;
-            color:#ffe5ec;
-        }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
 
-        p{
-            font-size:1.1em;
-            line-height:1.7;
-            margin-bottom:25px;
-        }
+    h2 {
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #ffe5ec;
+    }
 
-        .heart{
-            font-size:40px;
-            animation:pulse 1.5s infinite;
-        }
+    p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
 
-        @keyframes pulse{
-            0%,100%{transform:scale(1)}
-            50%{transform:scale(1.3)}
-        }
+    .heart {
+      font-size: 45px;
+      animation: pulse 1.5s infinite;
+    }
 
-        button{
-            background:linear-gradient(135deg,#ff758f,#ff4d6d);
-            border:none;
-            border-radius:50px;
-            padding:14px 28px;
-            font-size:1em;
-            color:white;
-            cursor:pointer;
-            transition:0.3s;
-            box-shadow:0 10px 25px rgba(0,0,0,0.25);
-        }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
 
-        button:hover{
-            transform:scale(1.05);
-            box-shadow:0 15px 30px rgba(0,0,0,0.35);
-        }
+    button {
+      background: linear-gradient(135deg, #ff758f, #ff4d6d);
+      border: none;
+      border-radius: 50px;
+      padding: 14px 26px;
+      font-size: 1em;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
 
-        .floating-hearts span{
-            position:absolute;
-            font-size:20px;
-            animation: float 6s linear infinite;
-            opacity:0.8;
-        }
+    button:hover {
+      transform: scale(1.05);
+    }
 
-        @keyframes float{
-            0%{transform:translateY(100vh) scale(0);}
-            100%{transform:translateY(-10vh) scale(1);}
-        }
-    </style>
+    .floating-hearts span {
+      position: fixed;
+      font-size: 20px;
+      animation: float 7s linear infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(110vh) scale(0); }
+      100% { transform: translateY(-10vh) scale(1); }
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="floating-hearts">
-        <span style="left:10%;animation-delay:0s">💖</span>
-        <span style="left:20%;animation-delay:2s">💕</span>
-        <span style="left:35%;animation-delay:4s">💗</span>
-        <span style="left:50%;animation-delay:1s">💓</span>
-        <span style="left:65%;animation-delay:3s">💞</span>
-        <span style="left:80%;animation-delay:5s">💘</span>
-    </div>
+  <div class="floating-hearts">
+    <span style="left:10%; animation-delay:0s;">💖</span>
+    <span style="left:25%; animation-delay:2s;">💕</span>
+    <span style="left:40%; animation-delay:4s;">💗</span>
+    <span style="left:55%; animation-delay:1s;">💓</span>
+    <span style="left:70%; animation-delay:3s;">💞</span>
+    <span style="left:85%; animation-delay:5s;">💘</span>
+  </div>
 
+  <div class="container">
     <div class="card">
-        <h1>Happy Birthday Kiki 🎂</h1>
-        <h2>To the most beautiful soul 💖</h2>
+      <h1>Happy Birthday Kiki 🎂</h1>
+      <h2>To the most beautiful soul 💖</h2>
 
-        <p>
-            On this special day, I just want you to know how truly amazing you are.
-            Your smile lights up my world, your laughter is my favorite sound, and
-            your presence makes everything better.
-            <br><br>
-            May your day be filled with love, happiness, surprises, and endless joy.
-            You deserve nothing but the absolute best today and always.
-        </p>
+      <p>
+        On this special day, I just want you to know how truly amazing you are.
+        Your smile lights up my world, your laughter is my favorite sound,
+        and your presence makes everything better.
+        <br><br>
+        May your day be filled with love, happiness, surprises, and endless joy.
+        You deserve nothing but the absolute best today and always.
+      </p>
 
-        <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
 
-        <br>
+      <br>
 
-        <button onclick="showLove()">Tap for a Surprise 💌</button>
+      <button onclick="showLove()">Tap for a Surprise 💌</button>
     </div>
+  </div>
 
-    <audio autoplay loop>
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6c02a6cfa4.mp3?filename=romantic-piano-112193.mp3" type="audio/mp3">
-    </audio>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6c02a6cfa4.mp3?filename=romantic-piano-112193.mp3" type="audio/mp3">
+  </audio>
 
-    <script>
-        function showLove(){
-            alert("Kiki 💖\n\nHappy Birthday beautiful 🎂\nYou mean so much to me and I’m grateful for every moment with you. May your smile never fade. ❤️");
-        }
-    </script>
+  <script>
+    function showLove() {
+      alert("Kiki 💖\n\nHappy Birthday beautiful 🎂\nYou mean so much to me and I’m grateful for every moment with you. May your smile never fade. ❤️");
+    }
+  </script>
 
 </body>
 </html>
